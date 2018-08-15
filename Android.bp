@@ -67,7 +67,14 @@ android_library {
         "btadva_settings_java_defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+srcs: ["src/**/*.java", 
+       "Spaceship/src/**/*.java"],
+
+aaptflags: ["--extra-packages com.cygnus.spaceship"],
+
+resource_dirs: ["res",
+                "Spaceship/res"
+],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
