@@ -18,4 +18,16 @@
 
     <!-- CygnusOS version -->
     <string name="cygnus_version">CygnusOS version</string>
+
+    <!-- Mobile network setting screen, summary of Mobile data switch preference when the network
+         is unavailable, the preference selection will be disabled. [CHAR LIMIT=NONE] -->
+    <string name="mobile_data_settings_summary_unavailable">No SIM card available</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+
+    <!-- Support -->
+    <string name="ok">OK</string>
+    <string name="edit_hint">Value</string>
+    <string name="seek_value_edit_label">Set value</string>
 </resources>
