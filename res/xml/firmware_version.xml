@@ -21,6 +21,15 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- CygnusOS version -->
+    <Preference
+        android:key="cygnus_version"
+        android:title="@string/cygnus_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:searchable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.CygnusVersionDetailPreferenceController" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
