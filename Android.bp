@@ -104,6 +104,7 @@ resource_dirs: ["res",
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "windowExtLib",
+        "powerusagefeaturegoogle",
     ],
 
     libs: [
@@ -173,4 +174,10 @@ filegroup {
 filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
+}
+
+java_import {
+    name: "powerusagefeaturegoogle",
+    jars: ["libs/powerusagefeaturegoogle.jar"],
+    sdk_version: "current",
 }
