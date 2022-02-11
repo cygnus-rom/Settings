@@ -104,6 +104,7 @@ resource_dirs: ["res",
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "powerusagefeaturegoogle",
+        "faceunlock_framework",
     ],
 
     libs: [
