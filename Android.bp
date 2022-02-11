@@ -105,6 +105,7 @@ resource_dirs: ["res",
         "lottie",
         "windowExtLib",
         "powerusagefeaturegoogle",
+        "faceunlock_framework",
     ],
 
     libs: [
