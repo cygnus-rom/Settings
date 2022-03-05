@@ -62,7 +62,7 @@
         android:key="top_level_spaceship_settings"
         android:title="@string/spaceship_title"
         android:summary="@string/spaceship_summary"
-        android:icon="@drawable/ic_homepage_spaceship"
+        android:icon="@drawable/ic_settings_spaceship"
         android:order="-105"
         android:fragment="com.cygnus.spaceship.Spaceship"/>
 

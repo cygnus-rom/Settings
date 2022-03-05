@@ -4560,7 +4560,7 @@
         <!-- Spaceship -->
         <activity android:name=".Settings$SpaceshipActivity"
             android:label="@string/spaceship_title"
-            android:icon="@drawable/ic_homepage_spaceship"
+            android:icon="@drawable/ic_settings_spaceship"
             android:exported="true"
             android:parentActivityName="com.android.settings">
             <intent-filter android:priority="69">
