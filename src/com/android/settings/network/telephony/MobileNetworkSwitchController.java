@@ -107,7 +107,7 @@ public class MobileNetworkSwitchController extends BasePreferenceController impl
             // mSubscriptionManager#isSubscriptionEnabled
             int phoneId = mSubscriptionManager.getSlotIndex(mSubId);
             Log.d(TAG, "displayPreference: mSubId=" + mSubId + ", mSubInfo=" + mSubInfo);
-            if ((mSubInfo != null && (mSubInfo.areUiccApplicationsEnabled() != isChecked))) {
+            if (mSubscriptionManager.isActiveSubscriptionId(mSubId) != isChecked) {
                 SubscriptionUtil.startToggleSubscriptionDialogActivity(mContext, mSubId, isChecked);
                 return true;
             }
@@ -135,10 +135,11 @@ public class MobileNetworkSwitchController extends BasePreferenceController impl
             }
         }
 
-        boolean isEcbmEnabled = TelephonyProperties.in_ecm_mode().orElse(false);
-        if ((TelephonyManager.CALL_STATE_IDLE != mCallState) || isEcbmEnabled) {
+        boolean isEcbmEnabled = mTelephonyManager.getEmergencyCallbackMode();
+        boolean isScbmEnabled = TelephonyProperties.in_scbm().orElse(false);
+        if ((TelephonyManager.CALL_STATE_IDLE != mCallState) || isEcbmEnabled || isScbmEnabled) {
             Log.d(TAG, "update: disable switchbar, isEcbmEnabled=" + isEcbmEnabled +
-                    ", mCallState=" + mCallState);
+                    ", isScbmEnabled=" + isScbmEnabled + ", mCallState=" + mCallState);
             mSwitchBar.setSwitchBarEnabled(false);
         } else {
             mSwitchBar.setSwitchBarEnabled(true);
@@ -151,8 +152,9 @@ public class MobileNetworkSwitchController extends BasePreferenceController impl
         } else {
             mSwitchBar.show();
             Log.d(TAG, "update(): mSubId=" + mSubId +
-                    ", areUiccApplicationsEnabled=" + mSubInfo.areUiccApplicationsEnabled());
-            mSwitchBar.setCheckedInternal(mSubInfo.areUiccApplicationsEnabled());
+                    ", isActiveSubscriptionId=" +
+                    mSubscriptionManager.isActiveSubscriptionId(mSubId));
+            mSwitchBar.setCheckedInternal(mSubscriptionManager.isActiveSubscriptionId(mSubId));
         }
     }
 
