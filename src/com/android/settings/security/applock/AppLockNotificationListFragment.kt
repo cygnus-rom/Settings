@@ -21,7 +21,7 @@ import android.os.Bundle
 import android.view.View
 
 import com.android.settings.R
-import com.android.settings.awaken.fragments.AppListFragment
+import com.android.settings.cygnus.fragments.AppListFragment
 
 class AppLockNotificationListFragment : AppListFragment() {
 
