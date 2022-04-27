@@ -24,12 +24,12 @@ import android.hardware.biometrics.BiometricManager.Authenticators
 import androidx.preference.Preference
 import androidx.preference.SwitchPreference
 
-import com.android.settings.awaken.AwakenBasePreferenceController
+import com.android.settings.cygnus.CygnusBasePreferenceController
 
 class AppLockBiometricPreferenceController(
     context: Context,
     key: String,
-) : AwakenBasePreferenceController(context, key),
+) : CygnusBasePreferenceController(context, key),
         Preference.OnPreferenceChangeListener {
 
     private val appLockManager = context.getSystemService(AppLockManager::class.java)

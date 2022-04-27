@@ -29,12 +29,12 @@ import androidx.preference.PreferenceScreen
 import com.android.internal.widget.LockPatternUtils
 import com.android.settings.R
 import com.android.settingslib.core.lifecycle.Lifecycle
-import com.android.settings.awaken.AwakenBasePreferenceController
+import com.android.settings.cygnus.CygnusBasePreferenceController
 
 class AppLockNotificationPreferenceController(
     private val context: Context,
     lifecycle: Lifecycle?,
-) : AwakenBasePreferenceController(context, KEY),
+) : CygnusBasePreferenceController(context, KEY),
     LifecycleEventObserver {
 
     private val appLockManager = context.getSystemService(AppLockManager::class.java)

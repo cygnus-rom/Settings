@@ -22,12 +22,12 @@ import android.content.Context
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 
-import com.android.settings.awaken.AwakenBasePreferenceController
+import com.android.settings.cygnus.CygnusBasePreferenceController
 
 class AppLockTimeoutPreferenceController(
     context: Context,
     key: String,
-) : AwakenBasePreferenceController(context, key),
+) : CygnusBasePreferenceController(context, key),
         Preference.OnPreferenceChangeListener {
 
     private val appLockManager = context.getSystemService(AppLockManager::class.java)

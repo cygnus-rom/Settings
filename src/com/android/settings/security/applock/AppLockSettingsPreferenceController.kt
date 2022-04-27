@@ -37,13 +37,13 @@ import com.android.settings.password.ConfirmDeviceCredentialActivity
 import com.android.settings.security.SecuritySettings
 import com.android.settingslib.core.lifecycle.Lifecycle
 import com.android.settingslib.transition.SettingsTransitionHelper.TransitionType
-import com.android.settings.awaken.AwakenBasePreferenceController
+import com.android.settings.cygnus.CygnusBasePreferenceController
 
 class AppLockSettingsPreferenceController(
     context: Context,
     private val host: SecuritySettings?,
     lifecycle: Lifecycle?,
-) : AwakenBasePreferenceController(context, KEY),
+) : CygnusBasePreferenceController(context, KEY),
         LifecycleEventObserver {
 
     private val lockPatternUtils = LockPatternUtils(context)

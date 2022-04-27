@@ -23,10 +23,10 @@ import com.android.settings.search.BaseSearchIndexProvider
 import com.android.settingslib.core.AbstractPreferenceController
 import com.android.settingslib.core.lifecycle.Lifecycle
 import com.android.settingslib.search.SearchIndexable
-import com.android.settings.awaken.fragments.AwakenDashboardFragment
+import com.android.settings.cygnus.fragments.CygnusDashboardFragment
 
 @SearchIndexable
-class AppLockSettingsFragment : AwakenDashboardFragment() {
+class AppLockSettingsFragment : CygnusDashboardFragment() {
 
     override protected fun getPreferenceScreenResId() = R.xml.app_lock_settings
 
