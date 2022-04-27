@@ -68,7 +68,8 @@ android_library {
     ],
 
 srcs: ["src/**/*.java", 
-       "Spaceship/src/**/*.java"],
+       "Spaceship/src/**/*.java",
+       "src/**/*.kt",],
 
 aaptflags: ["--extra-packages com.cygnus.spaceship"],
 
