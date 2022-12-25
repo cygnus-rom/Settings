@@ -59,7 +59,6 @@
         settings:highlightableMenuKey="@string/menu_key_notifications"/>
 
     <com.android.settings.widget.HomepagePreference
-    <Preference
         android:key="top_level_spaceship_settings"
         android:title="@string/spaceship_title"
         android:summary="@string/spaceship_summary"
@@ -67,8 +66,7 @@
         android:order="-105"
         android:fragment="com.cygnus.spaceship.Spaceship"/>
 
-
-    <Preference
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
         android:icon="@drawable/ic_settings_battery_white"
         android:key="top_level_battery"

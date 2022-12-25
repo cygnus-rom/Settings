@@ -351,7 +351,7 @@ public class SettingsGateway {
             MobileNetworkSettings.class.getName(),
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
-            TurnScreenOnDetails.class.getName()
+            TurnScreenOnDetails.class.getName(),
             Spaceship.class.getName()
     };
 
