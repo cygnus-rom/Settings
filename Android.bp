@@ -118,6 +118,7 @@ resource_dirs: ["res",
         "SettingsLibActivityEmbedding",
         "Settings-change-ids",
         "faceunlock_framework",
+        "SystemUIUnfoldLib",
     ],
 
     libs: [
